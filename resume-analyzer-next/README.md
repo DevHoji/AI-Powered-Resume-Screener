@@ -1,4 +1,3 @@
-# AI-Powered-Resume-Screener
 # AI Resume Analyzer
 
 A modern web application that analyzes resumes and provides detailed feedback on content, format, and additional aspects.

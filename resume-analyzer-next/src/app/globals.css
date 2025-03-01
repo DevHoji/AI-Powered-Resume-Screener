@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: theme('colors.foreground'); /* Fixed path */
+  background-color: theme('colors.background'); /* Fixed path */
+  font-family: theme('fontFamily.sans');
+  min-height: 100vh;
+}
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-md shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-dark text-foreground font-semibold py-2 px-4 rounded-md shadow-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-card rounded-lg shadow-md border border-card-shadow overflow-hidden;
+  }
+
+  .input-field {
+    @apply bg-card border border-input-border rounded-md px-4 py-2 text-foreground placeholder-foreground/60 focus:outline-none focus:ring-2 focus:ring-input-focus focus:border-input-focus transition-shadow duration-200 shadow-sm;
+  }
+
+  .loading-spinner {
+    @apply w-6 h-6 border-4 border-primary border-t-transparent rounded-full animate-spin;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md rounded-md;
+  }
+}
